@@ -16,9 +16,9 @@ export default function Navbar() {
   ];
   
   return (
-    <nav className="sticky top-0 z-40 bg-surface border-b border-border">
+    <nav className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-brand-border shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <BrandLogo variant="nav" />
           
@@ -28,9 +28,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-text hover:text-primary transition-colors font-medium"
+                className="text-brand-charcoal hover:text-brand-red font-semibold transition-all duration-200 hover:scale-105 relative group"
               >
                 {link.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-red transition-all duration-200 group-hover:w-full" />
               </Link>
             ))}
           </div>
@@ -48,11 +49,11 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-button hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-brand-saffron/10 transition-all duration-200"
             aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6"
+              className="w-6 h-6 text-brand-charcoal"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -71,13 +72,13 @@ export default function Navbar() {
         
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className="md:hidden py-4 border-t border-brand-border bg-white/95 backdrop-blur-md">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-text hover:text-primary transition-colors font-medium py-2"
+                  className="text-brand-charcoal hover:text-brand-red transition-colors font-semibold py-2 hover:bg-brand-saffron/5 px-2 rounded-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}

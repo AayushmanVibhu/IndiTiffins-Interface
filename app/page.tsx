@@ -69,26 +69,37 @@ export default function HomePage() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-brand-cream via-background to-brand-saffron/5 py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative min-h-screen flex items-center">
+        {/* Background Image with Overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${process.env.NODE_ENV === 'production' ? '/IndiTiffins-Interface' : ''}/photos/food.jpeg)`
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-cream" />
+        
+        {/* Content */}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="order-2 lg:order-1">
-              <Badge variant="warning" className="mb-6">
+              <Badge variant="warning" className="mb-6 bg-brand-saffron/90 backdrop-blur-sm">
                 Now Serving ASU Tempe Campus
               </Badge>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-text mb-6 tracking-tight">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight drop-shadow-2xl">
                 Home-style Indian tiffins,
-                <span className="text-brand-red"> made for ASU life.</span>
+                <span className="text-brand-saffron"> made for ASU life.</span>
               </h1>
-              <p className="text-lg md:text-xl text-text-muted mb-10 max-w-2xl">
+              <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl drop-shadow-lg">
                 Breakfast + dinner delivered Mon–Sat around Tempe campus. Simple subscriptions. Real food.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="primary" size="lg">
+                <Button variant="primary" size="lg" className="shadow-xl">
                   <Link href="/plans">View Plans</Link>
                 </Button>
-                <Button variant="ghost" size="lg">
+                <Button variant="ghost" size="lg" className="bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white/20">
                   <Link href="/menu">Explore Menu</Link>
                 </Button>
               </div>
@@ -96,7 +107,9 @@ export default function HomePage() {
             
             {/* Right Logo - Show on mobile above, desktop on right */}
             <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-              <BrandLogo variant="full" />
+              <div className="backdrop-blur-sm bg-white/10 p-6 rounded-3xl">
+                <BrandLogo variant="full" />
+              </div>
             </div>
           </div>
         </div>
