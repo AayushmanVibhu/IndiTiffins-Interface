@@ -187,31 +187,37 @@ export default function MenuPage() {
           />
         </div>
         
-        {/* Menu Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((item) => (
-            <Card key={item.id} hover>
-              <div className="flex flex-wrap items-center gap-2 mb-3">
-                <Badge variant="success">
-                  🌿 Vegetarian
-                </Badge>
-                <Badge variant="default">
-                  {'🌶️'.repeat(item.spiceLevel)}
-                </Badge>
-                <Badge variant="info">
-                  {item.mealType === 'breakfast' ? '🌅 Breakfast' : '🌙 Dinner'}
-                </Badge>
-              </div>
-              
-              <h3 className="text-lg font-semibold text-text mb-2">{item.name}</h3>
-              <p className="text-sm text-text-muted mb-4">{item.description}</p>
-              
-              <div className="flex items-center justify-between text-sm text-text-muted">
-                <span>{item.calories} cal</span>
-                <span className="text-text font-medium">{item.protein} Protein</span>
-              </div>
-            </Card>
-          ))}
+        {/* Menu List */}
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-4">
+            {items.map((item) => (
+              <Card key={item.id} hover className="transition-all">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                  <div className="flex-1">
+                    <div className="flex items-start gap-3 mb-2">
+                      <h3 className="text-xl font-semibold text-text">{item.name}</h3>
+                      <div className="flex gap-1.5 flex-shrink-0">
+                        <Badge variant="default" className="text-xs">
+                          {'🌶️'.repeat(item.spiceLevel)}
+                        </Badge>
+                        <Badge variant={item.mealType === 'breakfast' ? 'warning' : 'info'} className="text-xs">
+                          {item.mealType === 'breakfast' ? '🌅' : '🌙'}
+                        </Badge>
+                      </div>
+                    </div>
+                    <p className="text-text-muted mb-3">{item.description}</p>
+                    <div className="flex items-center gap-4 text-sm text-text-muted">
+                      <span className="flex items-center gap-1">
+                        <span className="font-medium text-text">{item.calories}</span> cal
+                      </span>
+                      <span className="text-text/60">•</span>
+                      <span>{item.protein} Protein</span>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </div>
