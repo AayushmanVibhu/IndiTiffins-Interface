@@ -68,17 +68,17 @@ export default function SignInPage() {
             />
             
             <div className="flex items-center justify-between text-sm">
-              <label className="flex items-center">
+              <label className="flex items-center cursor-pointer py-2">
                 <input
                   type="checkbox"
-                  className="rounded border-border text-primary focus:ring-primary mr-2"
+                  className="rounded border-border text-primary focus:ring-primary mr-2 w-5 h-5"
                 />
                 <span className="text-text-muted">Remember me</span>
               </label>
               
               <Link
                 href="/forgot-password"
-                className="text-primary hover:text-primary-dark font-medium"
+                className="text-primary hover:text-primary-dark font-medium py-2 px-1 inline-block min-h-[44px] flex items-center"
               >
                 Forgot password?
               </Link>
@@ -135,7 +135,7 @@ export default function SignInPage() {
             <span className="text-text-muted">Don't have an account? </span>
             <Link
               href="/signup"
-              className="text-primary hover:text-primary-dark font-medium"
+              className="text-primary hover:text-primary-dark font-medium inline-block py-2 px-1"
             >
               Sign up
             </Link>

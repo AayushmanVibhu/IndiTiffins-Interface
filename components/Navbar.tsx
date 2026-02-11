@@ -28,7 +28,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-brand-charcoal hover:text-brand-red font-semibold transition-all duration-200 hover:scale-105 relative group"
+                className="text-brand-charcoal hover:text-brand-red font-semibold transition-all duration-200 hover:scale-105 relative group py-2 px-3 min-h-[44px] flex items-center"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-red transition-all duration-200 group-hover:w-full" />
@@ -37,19 +37,19 @@ export default function Navbar() {
           </div>
           
           {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm">
-              <Link href="/signin">Sign In</Link>
-            </Button>
-            <Button variant="primary" size="sm">
-              <Link href="/plans">Get Started</Link>
-            </Button>
+          <div className="hidden md:flex items-center gap-4">
+            <Link href="/signin" className="inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-transparent hover:bg-gray-200 text-text border-2 border-border focus:ring-gray-300 px-6 py-3 text-sm min-h-[44px]">
+              Sign In
+            </Link>
+            <Link href="/plans" className="inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-brand-red hover:bg-brand-red2 text-white focus:ring-brand-red shadow-sm px-6 py-3 text-sm min-h-[44px]">
+              Get Started
+            </Link>
           </div>
           
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-brand-saffron/10 transition-all duration-200"
+            className="md:hidden p-3 rounded-lg hover:bg-brand-saffron/10 transition-all duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Toggle menu"
           >
             <svg
@@ -78,19 +78,19 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-brand-charcoal hover:text-brand-red transition-colors font-semibold py-2 hover:bg-brand-saffron/5 px-2 rounded-lg"
+                  className="text-brand-charcoal hover:text-brand-red transition-colors font-semibold py-3 hover:bg-brand-saffron/5 px-3 rounded-lg min-h-[44px] flex items-center"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="flex flex-col space-y-3 pt-4">
-                <Button variant="ghost" size="md" className="w-full">
-                  <Link href="/signin" className="w-full">Sign In</Link>
-                </Button>
-                <Button variant="primary" size="md" className="w-full">
-                  <Link href="/plans" className="w-full">Get Started</Link>
-                </Button>
+              <div className="flex flex-col gap-4 pt-4">
+                <Link href="/signin" className="inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-transparent hover:bg-gray-200 text-text border-2 border-border focus:ring-gray-300 px-8 py-4 text-base min-h-[48px] w-full">
+                  Sign In
+                </Link>
+                <Link href="/plans" className="inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-brand-red hover:bg-brand-red2 text-white focus:ring-brand-red shadow-sm px-8 py-4 text-base min-h-[48px] w-full">
+                  Get Started
+                </Link>
               </div>
             </div>
           </div>

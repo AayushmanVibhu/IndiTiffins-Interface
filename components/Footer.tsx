@@ -48,12 +48,12 @@ export default function Footer() {
           {footerSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-text font-semibold mb-4">{section.title}</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-text-muted hover:text-primary transition-colors text-sm"
+                      className="text-text-muted hover:text-primary transition-colors text-sm inline-block py-2 min-h-[44px] flex items-center"
                     >
                       {link.label}
                     </Link>
@@ -67,16 +67,16 @@ export default function Footer() {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-primary">IndiTiffins</span>
+              <span className="text-xl font-bold text-text">IndiTiffins</span>
               <span className="text-text-muted text-sm">
                 Authentic homemade meals for students
               </span>
             </div>
             
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center gap-4">
               <a
                 href="#"
-                className="text-text-muted hover:text-primary transition-colors"
+                className="text-text-muted hover:text-primary transition-colors p-2 inline-flex items-center justify-center min-h-[44px] min-w-[44px]"
                 aria-label="Facebook"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -85,7 +85,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="text-text-muted hover:text-primary transition-colors"
+                className="text-text-muted hover:text-primary transition-colors p-2 inline-flex items-center justify-center min-h-[44px] min-w-[44px]"
                 aria-label="Instagram"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -94,7 +94,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="text-text-muted hover:text-primary transition-colors"
+                className="text-text-muted hover:text-primary transition-colors p-2 inline-flex items-center justify-center min-h-[44px] min-w-[44px]"
                 aria-label="Twitter"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

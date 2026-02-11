@@ -200,16 +200,16 @@ export default function HowItWorksPage() {
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-white mb-8 max-w-2xl mx-auto">
             Join hundreds of students enjoying fresh, homemade Indian meals every week
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="ghost" size="lg" className="bg-white text-primary hover:bg-white/90">
-              <Link href="/plans">View Plans</Link>
-            </Button>
-            <Button variant="secondary" size="lg">
-              <Link href="/menu">See Menu</Link>
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Link href="/plans" className="inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-white text-primary hover:bg-white/90 focus:ring-gray-300 shadow-sm px-10 py-5 text-lg min-h-[52px]">
+              View Plans
+            </Link>
+            <Link href="/menu" className="inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-secondary hover:bg-secondary/90 text-white focus:ring-secondary shadow-sm px-10 py-5 text-lg min-h-[52px]">
+              See Menu
+            </Link>
           </div>
         </div>
       </div>

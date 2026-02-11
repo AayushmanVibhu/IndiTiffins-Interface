@@ -15,7 +15,7 @@ export default function Input({ label, error, helperText, className = '', ...pro
         </label>
       )}
       <input
-        className={`w-full px-4 py-3 rounded-button border ${
+        className={`w-full px-4 py-3 rounded-button border min-h-[48px] ${
           error ? 'border-accent focus:ring-accent' : 'border-border focus:ring-primary'
         } focus:outline-none focus:ring-2 focus:ring-offset-1 transition-all ${className}`}
         {...props}

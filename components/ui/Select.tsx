@@ -15,7 +15,7 @@ export default function Select({ label, error, options, className = '', ...props
         </label>
       )}
       <select
-        className={`w-full px-4 py-3 rounded-button border ${
+        className={`w-full px-4 py-3 rounded-button border min-h-[48px] ${
           error ? 'border-accent focus:ring-accent' : 'border-border focus:ring-primary'
         } focus:outline-none focus:ring-2 focus:ring-offset-1 transition-all bg-white ${className}`}
         {...props}

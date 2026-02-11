@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
   images: {
     unoptimized: true,
   },
-  basePath: '/IndiTiffins-Interface',
-  assetPrefix: '/IndiTiffins-Interface/',
+  basePath: isProd ? '/IndiTiffins-Interface' : '',
+  assetPrefix: isProd ? '/IndiTiffins-Interface/' : '',
 }
 
 module.exports = nextConfig

@@ -102,19 +102,19 @@ export default function SignUpPage() {
             />
             
             <div className="text-sm">
-              <label className="flex items-start">
+              <label className="flex items-start cursor-pointer py-2">
                 <input
                   type="checkbox"
                   required
-                  className="rounded border-border text-primary focus:ring-primary mr-2 mt-0.5"
+                  className="rounded border-border text-primary focus:ring-primary mr-2 mt-0.5 w-5 h-5 flex-shrink-0"
                 />
                 <span className="text-text-muted">
                   I agree to the{' '}
-                  <Link href="/terms" className="text-primary hover:text-primary-dark">
+                  <Link href="/terms" className="text-primary hover:text-primary-dark underline">
                     Terms of Service
                   </Link>{' '}
                   and{' '}
-                  <Link href="/privacy" className="text-primary hover:text-primary-dark">
+                  <Link href="/privacy" className="text-primary hover:text-primary-dark underline">
                     Privacy Policy
                   </Link>
                 </span>
@@ -172,7 +172,7 @@ export default function SignUpPage() {
             <span className="text-text-muted">Already have an account? </span>
             <Link
               href="/signin"
-              className="text-primary hover:text-primary-dark font-medium"
+              className="text-primary hover:text-primary-dark font-medium inline-block py-2 px-1"
             >
               Sign in
             </Link>

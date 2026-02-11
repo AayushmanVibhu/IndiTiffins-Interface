@@ -92,16 +92,16 @@ export default function HomePage() {
                 Home-style Indian tiffins,
                 <span className="text-brand-saffron"> made for ASU life.</span>
               </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl drop-shadow-lg">
+              <p className="text-lg md:text-xl text-white mb-10 max-w-2xl drop-shadow-lg">
                 Breakfast + dinner delivered Mon–Sat around Tempe campus. Simple subscriptions. Real food.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="primary" size="lg" className="shadow-xl">
-                  <Link href="/plans">View Plans</Link>
-                </Button>
-                <Button variant="ghost" size="lg" className="bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white/20">
-                  <Link href="/menu">Explore Menu</Link>
-                </Button>
+              <div className="flex flex-col sm:flex-row gap-6">
+                <Link href="/plans" className="inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-brand-red hover:bg-brand-red2 text-white focus:ring-brand-red shadow-xl px-10 py-5 text-lg min-h-[52px]">
+                  View Plans
+                </Link>
+                <Link href="/menu" className="inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 hover:bg-white/20 focus:ring-gray-300 px-10 py-5 text-lg min-h-[52px]">
+                  Explore Menu
+                </Link>
               </div>
             </div>
             
@@ -118,6 +118,7 @@ export default function HomePage() {
       {/* Trust Row */}
       <section className="py-16 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="sr-only">Why Choose IndiTiffins</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {trustFeatures.map((feature, index) => (
               <div key={index} className="text-center">
@@ -232,9 +233,9 @@ export default function HomePage() {
                 </ul>
                 
                 <div className="mt-6">
-                  <Button variant="primary" size="lg" className="w-full">
-                    <Link href="/plans">Choose Campus Plus</Link>
-                  </Button>
+                  <Link href="/plans" className="inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-brand-red hover:bg-brand-red2 text-white focus:ring-brand-red shadow-sm px-10 py-5 text-lg min-h-[52px] w-full">
+                    Choose Campus Plus
+                  </Link>
                 </div>
               </div>
             </div>
@@ -283,9 +284,9 @@ export default function HomePage() {
           </div>
           
           <div className="text-center mt-12">
-            <Button variant="primary" size="lg">
-              <Link href="/menu">View Full Menu</Link>
-            </Button>
+            <Link href="/menu" className="inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-brand-red hover:bg-brand-red2 text-white focus:ring-brand-red shadow-sm px-10 py-5 text-lg min-h-[52px]">
+              View Full Menu
+            </Link>
           </div>
         </div>
       </section>
@@ -296,12 +297,12 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Ready for Home-Cooked Meals at ASU?
           </h2>
-          <p className="text-lg text-white/90 mb-10">
+          <p className="text-lg text-white mb-10">
             Join students enjoying breakfast + dinner 6 days a week. Start with Campus Plus today.
           </p>
-          <Button variant="ghost" size="lg" className="bg-white text-primary hover:bg-white/90">
-            <Link href="/plans">Get Started Now</Link>
-          </Button>
+          <Link href="/plans" className="inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-white text-primary hover:bg-white/90 focus:ring-gray-300 shadow-sm px-10 py-5 text-lg min-h-[52px]">
+            Get Started Now
+          </Link>
         </div>
       </section>
     </div>

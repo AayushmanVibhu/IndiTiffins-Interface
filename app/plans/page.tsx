@@ -90,7 +90,7 @@ export default function PlansPage() {
               )}
               
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-text mb-2">{plan.name}</h3>
+                <h2 className="text-2xl font-bold text-text mb-2">{plan.name}</h2>
                 <p className="text-text-muted">{plan.description}</p>
               </div>
               
@@ -135,15 +135,16 @@ export default function PlansPage() {
                 ))}
               </ul>
               
-              <Button
-                variant={plan.popular ? 'primary' : 'ghost'}
-                size="lg"
-                className="w-full"
+              <Link
+                href="/checkout"
+                className={`inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed w-full ${
+                  plan.popular
+                    ? 'bg-brand-red hover:bg-brand-red2 text-white focus:ring-brand-red shadow-sm px-10 py-5 text-lg min-h-[52px]'
+                    : 'bg-transparent hover:bg-gray-200 text-text border-2 border-border focus:ring-gray-300 px-10 py-5 text-lg min-h-[52px]'
+                }`}
               >
-                <Link href="/checkout" className="w-full">
-                  Get Started
-                </Link>
-              </Button>
+                Get Started
+              </Link>
             </Card>
           ))}
         </div>

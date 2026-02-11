@@ -195,7 +195,7 @@ export default function MenuPage() {
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-start gap-3 mb-2">
-                      <h3 className="text-xl font-semibold text-text">{item.name}</h3>
+                      <h2 className="text-xl font-semibold text-text">{item.name}</h2>
                       <div className="flex gap-1.5 flex-shrink-0">
                         <Badge variant="default" className="text-xs">
                           {'🌶️'.repeat(item.spiceLevel)}

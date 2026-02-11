@@ -33,7 +33,7 @@ const config: Config = {
         surface: '#FFFFFF',
         text: {
           DEFAULT: '#111827',
-          muted: '#6B7280',
+          muted: '#4B5563',
         },
         border: '#E5E7EB',
       },

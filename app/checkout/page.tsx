@@ -263,12 +263,12 @@ export default function CheckoutPage() {
                   
                   {formData.dietaryType !== 'jain' && (
                     <div>
-                      <label className="flex items-start">
+                      <label className="flex items-start cursor-pointer py-2">
                         <input
                           type="checkbox"
                           checked={formData.noOnionGarlic}
                           onChange={(e) => handleChange('noOnionGarlic', e.target.checked)}
-                          className="rounded border-border text-primary focus:ring-primary mr-2 mt-0.5"
+                          className="rounded border-border text-primary focus:ring-primary mr-2 mt-0.5 w-5 h-5 flex-shrink-0"
                         />
                         <span className="text-sm text-text-muted">
                           No onion/garlic (Jain-friendly option)
