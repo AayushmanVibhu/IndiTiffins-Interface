@@ -250,13 +250,6 @@ export default function HomePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredMenuItems.map((item) => (
               <Card key={item.id} hover className="flex flex-col">
-                {/* Gradient placeholder image */}
-                <div className={`w-full h-48 rounded-xl mb-4 ${
-                  item.type === 'veg' 
-                    ? 'bg-gradient-to-br from-green-400 to-green-600' 
-                    : 'bg-gradient-to-br from-red-400 to-red-600'
-                }`} />
-                
                 <div className="flex items-center gap-2 mb-3">
                   <Badge variant={item.type === 'veg' ? 'success' : 'danger'}>
                     {item.type === 'veg' ? '🌿 Veg' : '🍗 Non-Veg'}

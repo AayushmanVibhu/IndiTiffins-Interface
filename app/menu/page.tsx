@@ -191,8 +191,6 @@ export default function MenuPage() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((item) => (
             <Card key={item.id} hover>
-              <div className="w-full h-48 rounded-xl mb-4 bg-gradient-to-br from-green-400 to-green-600" />
-              
               <div className="flex flex-wrap items-center gap-2 mb-3">
                 <Badge variant="success">
                   🌿 Vegetarian

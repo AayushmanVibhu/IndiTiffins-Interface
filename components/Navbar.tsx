@@ -13,7 +13,6 @@ export default function Navbar() {
     { href: '/menu', label: 'Menu' },
     { href: '/plans', label: 'Plans' },
     { href: '/how', label: 'How It Works' },
-    { href: '/areas', label: 'Delivery Areas' },
   ];
   
   return (
