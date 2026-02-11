@@ -7,12 +7,15 @@ interface BrandLogoProps {
   className?: string;
 }
 
+// Use basePath for GitHub Pages deployment
+const basePath = process.env.NODE_ENV === 'production' ? '/IndiTiffins-Interface' : '';
+
 export default function BrandLogo({ variant = 'nav', className = '' }: BrandLogoProps) {
   if (variant === 'nav') {
     return (
       <Link href="/" className={`flex items-center ${className}`}>
         <Image
-          src="/photos/logo.jpeg"
+          src={`${basePath}/photos/logo.jpeg`}
           alt="IndiTiffins"
           width={44}
           height={44}
@@ -27,7 +30,7 @@ export default function BrandLogo({ variant = 'nav', className = '' }: BrandLogo
   return (
     <div className={`${className}`}>
       <Image
-        src="/photos/logo.jpeg"
+        src={`${basePath}/photos/logo.jpeg`}
         alt="IndiTiffins"
         width={280}
         height={280}
